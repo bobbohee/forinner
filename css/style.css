@@ -1,0 +1,390 @@
+/* all */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-weight: normal;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+li {list-style: none;}
+a {text-decoration: none;}
+.ui-field-contain {
+  margin: 0;
+  padding: 0;
+}
+.global_header > .header > h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  padding: 12.5px 0;
+}
+.global_header > .header > h3 > a {
+  color: #fff;
+}
+.global_header > .header > span > a path {
+  color: #fff !important;
+}
+.global_header > .header > .back {
+  margin: 15px 20px;
+  float: left;
+}
+.global_header > .header > .lan {
+  margin: 15px 20px;
+  float: right;
+}
+.global_header > .header > .navbar > ul > li > a {
+  font-size: 16px;
+  padding: 6px 0;
+}
+.global_header > .content > ul > li > a > img { 
+  width: 60px;
+  height: 60px;
+  margin: 13px;
+}
+.global_header > .content > ul > li > a > h3 {
+  color: #333;
+}
+.global_header > .content >.hide{
+  width: 100%; height: 470px;
+}
+/* all - popup */
+
+#popupBasic {
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+#popupBasic > img {
+  margin: 0 35px 25px 35px;
+}
+#popupBasic > .popup_msg {
+  width: 200px;
+  height: 50px;
+  float: left;
+  border-right: 2px solid #cecece;
+}
+#popupBasic > .popup_msg > h4 {
+  width: 200px;
+  height: 20px;
+  text-overflow: ellipsis;  
+  overflow: hidden;
+
+  margin: 3px 0;
+  padding-right: 10px;
+}
+#popupBasic > .popup_speak {
+  float: right;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+#popupBasic > .popup_speak > img {
+  cursor: pointer;
+}
+.ui-popup-screen {
+  background-color: #000 !important;
+  opacity: 0.8 !important;
+}
+
+/* index.php */
+
+#index > .content > .pictogram_wrap {
+  width: 320px;
+  height: 510px;
+  margin: 0 auto;
+}
+#index > .content > .pictogram_wrap > .pictogram_cell {
+  width: 130px;
+  height: 160px;
+  float: left;
+  margin: 20px 15px 0 15px;
+}
+#index > .content > .pictogram_wrap > .pictogram_cell > a {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+}
+#index > .content > .pictogram_wrap > .pictogram_cell > a > p {
+  text-align: center;
+  margin-top: 10px;
+}
+#index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon {
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+/* emergency.php */
+
+#emergency > .content > .station{
+  width: 285px;
+  height: 330px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+#emergency > .content > .station > .fireStation,
+#emergency > .content > .station > .policeStation {
+  width: 285px;
+  height: 160px;
+  margin-top: 20px;
+}
+#emergency > .content > .station > .fireStation > a,
+#emergency > .content > .station > .policeStation > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#emergency > .content > .station > .fireStation > a > img,
+#emergency > .content > .station > .policeStation > a > img {
+  width: 130px;
+  float: left;
+}
+#emergency > .content > .station > .fireStation > a > h1,
+#emergency > .content > .station > .policeStation > a > h1 {
+  float: left;
+  font-size: 55px;
+  font-weight: bold;
+  padding: 5px 10px; 
+}  
+#emergency > .content > .station > .fireStation > a > h1 {
+  margin: 13px 0px 10px 35px;
+  border-bottom: 5px solid rgb(231, 76, 60);
+}
+#emergency > .content > .station > .policeStation > a > h1 {
+  margin: 17px 0px 10px 35px;
+  border-bottom: 5px solid rgb(52, 152, 219);
+}
+
+/* hospital_four.php */
+
+#hospital_four > .content > ul > li > img {
+  width: 60px;
+  height: 60px;
+  margin: 13px;
+}
+
+/* map.php */
+
+#pictogram > .content {
+  padding: 0;
+}
+#map {
+  width: 100%;
+  height: 500px;
+}
+.iwContent {
+  padding: 10px; 
+  text-align: center;
+}
+.iwContent > .iwContent_title {
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  color: #333;
+  font-weight: 100;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+}
+.iwContent > .iwContent_call {
+  color: #333;
+  font-weight: 100;
+  margin: 0 0 10px;
+  text-align: center;
+}
+.iwContent > .btn {
+  min-width: 54px;
+  height: 34px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 14px;
+}
+.iwContent > .btn-default {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.iwContent > .btn-default > a {
+  color: #333 !important;
+}
+.iwContent > .btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border: 1px solid #2e6da4;
+}
+.iwContent > .btn-primary > a {
+  color: #fff !important;
+  font-weight: 100;
+}
+
+/* translation.php */
+
+#translation > .content > form input {
+  width: 100%;
+  height: 205px;
+}
+#btn-mic, #btn-tts {
+  width: 46% !important;
+  height: 45px;
+  float: left;
+}
+#btn-mic svg, #btn-tts svg {
+  font-size: 16px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------- Tablet -----------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 760 x 960 */
+@media screen and (min-width: 760px){ 
+  
+  /* all - popup */
+  
+  #popupBasic {
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+  }
+  #popupBasic > img {
+    width: 270px; height: 270px;
+    margin: 0px 60px 40px 60px;
+  }
+  #popupBasic > .popup_msg {
+    width: 300px;
+    height: 80px;
+    float: left;
+    border-right: 2px solid #cecece;
+  }
+  #popupBasic > .popup_msg > h4 {
+    font-size: 23px;
+    font-weight: bold;
+    width: 300px;
+    height: 33px;
+    text-overflow: ellipsis;  
+    overflow: hidden;
+    margin: 5px 0;
+    padding-right: 10px;
+  }
+  #popupBasic > .popup_speak {
+    float: right;
+    width: 85px;
+    height: 85px;
+  }
+  #popupBasic > .popup_speak > img {
+    width: 70px; height: 70px;
+    cursor: pointer;
+  }
+  .ui-popup-screen {
+    background-color: #000 !important;
+    opacity: 0.8 !important;
+  }
+  
+  /* index.php */
+  
+  #index > .content > .pictogram_wrap {
+    width: 650px;
+    height: 850px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  #index > .content > .pictogram_wrap > .pictogram_cell {
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 20px 35px 0 35px;
+  }
+  #index > .content > .pictogram_wrap > .pictogram_cell > a {
+    display: inline-block;
+    width: 210px;
+    height: 210px;
+  }
+  #index > .content > .pictogram_wrap > .pictogram_cell > a > p {
+    width: 250px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 13px;
+  }
+  #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon {
+    width: 210px;
+    height: 210px;
+    padding: 35px;
+    border-radius: 20px;
+    background-color: rgba(224, 224, 224, 0.5);
+    margin-left: 20px;
+  }
+  #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon > img{
+    width: 140px; height: 140px;
+  } 
+  /* emergency.php */
+  
+
+  #emergency > .content > .station{
+    width: 650px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 120px;
+  }
+  #emergency > .content > .station > .fireStation,
+  #emergency > .content > .station > .policeStation {
+    width: 500px;
+    height: 280px;
+    margin-top: 35px;
+  }
+  #emergency > .content > .station > .fireStation > a,
+  #emergency > .content > .station > .policeStation > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0px 75px;
+  }
+  #emergency > .content > .station > .fireStation > a > img,
+  #emergency > .content > .station > .policeStation > a > img {
+    width: 270px;
+    float: left;
+  }
+  #emergency > .content > .station > .fireStation > a > h1,
+  #emergency > .content > .station > .policeStation > a > h1 {
+    float: left;
+    font-size: 85px;
+    font-weight: bold;
+    padding: 5px 15px; 
+  }  
+  #emergency > .content > .station > .fireStation > a > h1 {
+    margin: 65px 0px 65px 45px;
+    border-bottom: 7px solid rgb(231, 76, 60);
+  }
+  #emergency > .content > .station > .policeStation > a > h1 {
+    margin: 75px 0px 75px 45px;
+    border-bottom: 7px solid rgb(52, 152, 219);
+  }
+  
+  /* map.php */
+  #map {
+    width: 100%;
+    height: 960px;
+  }
+
+  /* translation.php */
+
+  #translation > .content > form input {
+    width: 100%;
+    height: 350px;
+    font-size: 40px;
+  }
+  #btn-mic, #btn-tts {
+    width: 48% !important;
+    height: 45px;
+    float: left;
+  }
+  #btn-mic svg, #btn-tts svg {
+    font-size: 20px;
+  }
+
+}
