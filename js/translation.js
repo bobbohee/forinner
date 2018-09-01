@@ -58,7 +58,7 @@ $(function () {
 
     for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
-        finalTranscript += event.results[i][0].transcript;
+        finalTranscript = event.results[i][0].transcript;
         console.log("onresult event.results -> " + event.results[i]);
       } else {                          // 중간의 음성
         interimTranscript += event.results[i][0].transcript;
