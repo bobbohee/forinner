@@ -25,7 +25,7 @@
 
   </script>
   <div data-role="page" id="translation" class="global_header">
-  <?php include("role-header-pictogram.php"); ?>
+  <?php include("role-header-normal.php"); ?>
     <div data-role="content" class="content">
       <form method="get" autocomplete="off">
         <input type="text" name="eng" id="eng" class="voice_eng">
