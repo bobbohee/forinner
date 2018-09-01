@@ -1,15 +1,16 @@
 $(function () {
 
   if (typeof webkitSpeechRecognition != 'function') {
-    alert('크롬에서만 동작 합니다.');
+    alert('크롬에서만 동작합니다\nOnly works with Chrome');
     return false;
   }
 
   var recognition = new webkitSpeechRecognition();
-  var isRecognizing = false;
-  var ignoreOnend = false;
-  var finalTranscript = '';
+  var isRecognizing = false;  // 음성 여부
+  var ignoreOnend = false;    // 무시
+  var finalTranscript = '';   // 음성 -> 텍스트
   var $btnMic = $('#btn-mic');
+
   recognition.continuous = true;
   recognition.interimResults = true;
 
@@ -47,6 +48,8 @@ $(function () {
   recognition.onresult = function (event) {
     console.log('onresult', event);
 
+    var interimTranscript = '';   // 중간의 음성 변환 텍스트
+
     if (typeof (event.results) == 'undefined') {
       recognition.onend = null;
       recognition.stop();
@@ -57,7 +60,10 @@ $(function () {
       if (event.results[i].isFinal) {
         finalTranscript += event.results[i][0].transcript;
         console.log("onresult event.results -> " + event.results[i]);
+      } else {                          // 중간의 음성
+        interimTranscript += event.results[i][0].transcript;
       }
+
     }
 
     finalTranscript = capitalize(finalTranscript);
@@ -81,8 +87,8 @@ $(function () {
     $btnMic.attr('class', 'off ui-btn ui-mini');
   };
 
-  var two_line = /\n\n/g;
   var one_line = /\n/g;
+  var two_line = /\n\n/g;
   var first_char = /\S/;
 
   function linebreak(s) {
@@ -105,7 +111,7 @@ $(function () {
     responsiveVoice.speak(text, "Korean Female");
   }
 
-  $btnMic.click(function () {
+  $("#btn-mic").click(function () {
     alert("음성 인식을 시작합니다\nStart speech recognition");
 
     if (isRecognizing) {
@@ -114,13 +120,15 @@ $(function () {
     }
 
     finalTranscript = '';
-    $(".voice_eng").val('');
-    $(".speak_kor").val('');
+    $("#eng").val('');
+    $("#kor").val('');
     recognition.lang = 'en-US';
     recognition.start();
     ignoreOnend = false;
   });
+
   $('#btn-tts').click(function () {
-    textToSpeech($('#kor').val() || '전 음성 인식된 글자를 읽습니다.');
+    textToSpeech($('#kor').val());
   });
+
 });
