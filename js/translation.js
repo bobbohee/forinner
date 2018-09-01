@@ -112,8 +112,8 @@ $(function () {
     }
 
     finalTranscript = '';
-    $(".voice_eng").text('');
-    $(".speak_kor").text('');
+    $(".voice_eng").val('');
+    $(".speak_kor").val('');
     recognition.lang = 'en-US';
     recognition.start();
     ignoreOnend = false;
