@@ -160,7 +160,7 @@ $(function() {
   }
 
   function start(event) {
-    alert("음성 인식 시작");
+    alert("음성 인식을 시작합니다\nStart speech recognition");
     if (isRecognizing) {
       recognition.stop();
       return;
@@ -178,7 +178,7 @@ $(function() {
    * textToSpeech
    * 지원: 크롬, 사파리, 오페라, 엣지
    */
-  function textToSpeech(text) {
+  function textToSpeech( text ) {
     console.log('textToSpeech', arguments);
 
     /*
@@ -193,7 +193,7 @@ $(function() {
     */
 
     // simple version
-    speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+    responsiveVoice.speak(text, "Korean Female");
   }
 
   /**
@@ -216,6 +216,6 @@ $(function() {
    */
   $btnMic.click(start);
   $('#btn-tts').click(function() {
-    textToSpeech($('#final_span').val() || '전 음성 인식된 글자를 읽습니다.');
+    textToSpeech($('#kor').val() || '전 음성 인식된 글자를 읽습니다.');
   });
 });

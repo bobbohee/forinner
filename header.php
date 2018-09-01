@@ -21,6 +21,7 @@
   <script src="js/all.min.js"></script>
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/jquery.mobile-1.4.5.js"></script>
+  <script src="js/responsivevoice.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
   <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
