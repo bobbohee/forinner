@@ -56,11 +56,12 @@ $(function () {
     for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
         finalTranscript += event.results[i][0].transcript;
+        console.log("onresult event.results -> " + event.results[i]);
       }
     }
 
     finalTranscript = capitalize(finalTranscript);
-    var eng = linebreak(finalTranscript)
+    var eng = linebreak(finalTranscript);
     $("#eng").val(eng);
 
     console.log('finalTranscript', finalTranscript);
