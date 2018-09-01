@@ -5,7 +5,7 @@
     </a>
   </span>
   <span class="lan">
-    <a href="index.php" rel="external">
+    <a href="translation.php" rel="external">
       <i class="fas fa-language fa-lg"></i>
     </a>
   </span>

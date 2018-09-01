@@ -1,84 +1,124 @@
 $(function () {
 
-  var recognition = new webkitSpeechRecognition();
-  var isRecognizing = false;  // 음성 여부
-  var ignoreOnend = false;    // 무시
-  var finalTranscript = '';   // 음성을 텍스트로
-  var $btnMic = $('#btn-mic');
+  if (typeof webkitSpeechRecognition != 'function') {
+    alert('크롬에서만 동작 합니다.');
+    return false;
+  }
 
-  // 인식에 대해 연속 결과를 반환할지 또는 단일 결과만 반환할지 여부를 제어 
-  // 단일 (false) 기본값
+  var recognition = new webkitSpeechRecognition();
+  var isRecognizing = false;
+  var ignoreOnend = false;
+  var finalTranscript = '';
+  var $btnMic = $('#btn-mic');
   recognition.continuous = true;
-  // 중간 결과를 반환할지 여부를 조정 (true) 
   recognition.interimResults = true;
 
-  // 마이크를 시작하고 음성이 들리면 시작
-  isRecognizing = true;
   recognition.onstart = function () {
+    console.log('onstart', arguments);
+    isRecognizing = true;
+
     $btnMic.attr('class', 'on ui-btn ui-mini');
   };
 
   recognition.onend = function () {
+    console.log('onend', arguments);
     isRecognizing = false;
+
     if (ignoreOnend) {
       return false;
     }
+
+    // DO end process
     $btnMic.attr('class', 'off ui-btn ui-mini');
     if (!finalTranscript) {
+      console.log('empty finalTranscript');
       return false;
     }
+
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+      var range = document.createRange();
+      range.selectNode(document.getElementById('eng'));
+      window.getSelection().addRange(range);
+    }
+
   };
 
-  // 음성 결과를 반환하면 시작
   recognition.onresult = function (event) {
-    var interimTranscript = '';   // 중간의 음성 변환 텍스트
+    console.log('onresult', event);
+
     if (typeof (event.results) == 'undefined') {
       recognition.onend = null;
       recognition.stop();
       return;
     }
+
     for (var i = event.resultIndex; i < event.results.length; ++i) {
-      if (event.results[i].isFinal) {   // 완성된 음성
+      if (event.results[i].isFinal) {
         finalTranscript += event.results[i][0].transcript;
-        console.log("onresult event.results -> " + event.results[i]);
-      } else {                          // 중간의 음성
-        interimTranscript += event.results[i][0].transcript;
       }
     }
+
     finalTranscript = capitalize(finalTranscript);
-    var eng = linebreak(finalTranscript)
-    $(".voice_eng").text(eng);
+    $("#eng").val(linebreak(finalTranscript));
+
+    console.log('finalTranscript', finalTranscript);
   };
 
-  var one_line = /\n/g;
+  recognition.onerror = function (event) {
+    console.log('onerror', event);
+
+    if (event.error == 'no-speech') {
+      ignoreOnend = true;
+    } else if (event.error == 'audio-capture') {
+      ignoreOnend = true;
+    } else if (event.error == 'not-allowed') {
+      ignoreOnend = true;
+    }
+
+    $btnMic.attr('class', 'off ui-btn ui-mini');
+  };
+
   var two_line = /\n\n/g;
+  var one_line = /\n/g;
   var first_char = /\S/;
 
-  function linebreak(s) {   // ?
+  function linebreak(s) {
     return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
   }
-  function capitalize(s) {  // 첫글자를 대문자로 바꾸기
+
+  function capitalize(s) {
     return s.replace(first_char, function (m) {
       return m.toUpperCase();
     });
   }
-  function start(event) {
-    if (isRecognizing) {  // 음성이 끊어지면
+
+  /*
+   * textToSpeech
+   * 지원: 크롬, 사파리, 오페라, 엣지
+   */
+  function textToSpeech(text) {
+    console.log('textToSpeech', arguments);
+
+    responsiveVoice.speak(text, "Korean Female");
+  }
+
+  $btnMic.click(function () {
+    alert("음성 인식을 시작합니다\nStart speech recognition");
+
+    if (isRecognizing) {
       recognition.stop();
       return;
     }
+
     finalTranscript = '';
     $(".voice_eng").text('');
     $(".speak_kor").text('');
     recognition.lang = 'en-US';
     recognition.start();
     ignoreOnend = false;
-  }
-  function textToSpeech(text) {
-    speechSynthesis.speak(new SpeechSynthesisUtterance(text));
-  }
-  $btnMic.click(start);
+  });
   $('#btn-tts').click(function () {
-    textToSpeech($('.speak_kor').val());
+    textToSpeech($('#kor').val() || '전 음성 인식된 글자를 읽습니다.');
   });
 });
