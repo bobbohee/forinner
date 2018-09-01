@@ -30,33 +30,13 @@ $(popup_lv).click(function() {
   
 
 /*  SPEECH  */
-var synth = window.speechSynthesis;
-var voices = [];
-// 현재 장치에서 사용 가능한 모든 음성을 나타내는 개체 목록을 반환
-voices = synth.getVoices();
 
 function speak() {
-  
-  if (synth.speaking) {
-    console.error('speechSynthesis.speaking');
-    return;
-  }
 
   if (voice_msg !== '') {
     
     var voice_msg = $(popupBasic).find('.msg_ko').text();
-    var utterThis = new SpeechSynthesisUtterance(voice_msg);
-    
-    utterThis.onend = function (event) {
-      console.log('SpeechSynthesisUtterance.onend');
-    }
-    utterThis.onerror = function (event) {
-      console.log('SpeechSynthesisUtterance.onerror');
-    }
-    
-    utterThis.voice = voices[0];
-    
-    synth.speak(utterThis);
+    responsiveVoice.speak(voice_msg, "Korean Female");
     
   } // if()
   
