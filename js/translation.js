@@ -60,7 +60,8 @@ $(function () {
     }
 
     finalTranscript = capitalize(finalTranscript);
-    $("#eng").val(linebreak(finalTranscript));
+    var eng = linebreak(finalTranscript)
+    $("#eng").val(eng);
 
     console.log('finalTranscript', finalTranscript);
   };
