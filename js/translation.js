@@ -67,7 +67,9 @@ $(function () {
     }
 
     finalTranscript = capitalize(finalTranscript);
+    alert(finalTranscript);
     var eng = linebreak(finalTranscript);
+    alert(eng);
     $("#eng").val(eng);
 
     console.log('finalTranscript', finalTranscript);
