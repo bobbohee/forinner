@@ -13,7 +13,7 @@ $(function () {
   recognition.interimResults = true;
 
   // 마이크를 시작하고 음성이 들리면 시작
-    isRecognizing = true;
+  isRecognizing = true;
   recognition.onstart = function () {
     $btnMic.attr('class', 'on ui-btn ui-mini');
   };

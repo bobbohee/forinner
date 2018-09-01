@@ -4,7 +4,7 @@
     <div data-role="content" class="content">
       <div class="pictogram_wrap">
         <div class="pictogram_cell">
-          <a href="location.php" rel="external">
+          <a href="mic.php" rel="external">
             <div class="pictogram_icon">
               <img src="img/icon/route.png" alt="location" width="90" height="90">
             </div>
