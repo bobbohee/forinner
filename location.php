@@ -2,7 +2,7 @@
   <div data-role="page" id="location" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <li><a><img src="img/location/airport.png"><h3>공항은 어디 있나요?</h3><h3>Where is the airport?</h3></a></li>
         <li><a><img src="img/location/transfer.png"><h3>비행기 환승하는 곳은 어디 있나요?</h3><h3>Where can I transfer my plane?</h3></a></li>

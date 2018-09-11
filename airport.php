@@ -2,7 +2,7 @@
   <div data-role="page" id="airport" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <!-- 공항에서 -->
         <li><a><img src="img/airport/exchange.png"><h3>환전해 주시겠어요?</h3><h3>I'd like to exchange this</h3></a></li>

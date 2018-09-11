@@ -14,6 +14,9 @@ a {text-decoration: none;}
   margin: 0;
   padding: 0;
 }
+.global_header {
+  height: 1300px;
+}
 .global_header > .header > h3 {
   font-size: 22px;
   font-weight: bold;

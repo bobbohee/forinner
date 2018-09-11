@@ -2,7 +2,7 @@
   <div data-role="page" id="speak" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <!-- 자주 하는 말 -->
         <li><a><img src="img/speak/people.png"><h3>외국에서 온 관광객입니다.</h3><h3>I am a tourist from abroad.</h3></a></li>

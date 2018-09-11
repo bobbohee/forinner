@@ -2,7 +2,7 @@
   <div data-role="page" id="hospital_four" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <li>
           <img src="img/hospital/emoji_number/clock.png">

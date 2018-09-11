@@ -2,7 +2,7 @@
   <div data-role="page" id="pharmacy" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <li><a><img src="img/pharmacy/cold.png"><h3>감기약</h3><h3>Cold medicine</h3></a></li>
         <li><a><img src="img/pharmacy/thermometer.png"><h3>해열제</h3><h3>Fever reducer</h3></a></li>

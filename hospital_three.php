@@ -2,7 +2,7 @@
   <div data-role="page" id="hospital_three" class="global_header">
   <?php include("role-header-pictogram.php"); ?>
     <div data-role="content" class="content">
-    <input type="search" name="search-mini" id="search-mini" data-mini="true" />
+    <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <li><a><img src="img/hospital/symptom/sharp.png"><h3>예리하게 찌르는</h3><h3>Sharp pain</h3></a></li>
         <li><a><img src="img/hospital/symptom/throbing.png"><h3>욱신욱신</h3><h3>Throbing pain</h3></a></li>
