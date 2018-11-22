@@ -1,12 +1,15 @@
-ForInner
-===========
+# ForInner
 
-hybrid web app :iphone: : 2018 스마트국토엑스포
--------------------------
-
+## hybrid web app :iphone: : 2018 스마트국토엑스포
 
 ### ForInner website with heroku
 
-<br>
+[https://forinner.herokuapp.com/index.php]
 
-[ForInner](https://forinner.herokuapp.com/index.php)
+### VERSION
+
+1.0 / 2018. 09. 11
+result forinner
+
+2.0 / 2018. 11. ~
+edit find the way
