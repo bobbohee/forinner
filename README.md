@@ -1,12 +1,12 @@
-## Description
+# Description
 
 [Forinner](https://forinner.herokuapp.com/index.php) is English possible hospital information map and finding a way service and provide various pictogram
 
-### LIBRARY
+## LIBRARY
 
 // later
 
-### VERSION
+## VERSION
 
 1.0 / 2018. 09. 11
 
@@ -16,7 +16,7 @@ result forinner
 
 edit find the way
 
-### DEVELOPER
+## DEVELOPER
 
 JS : park-bohee
 
