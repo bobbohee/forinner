@@ -44,9 +44,9 @@ a {text-decoration: none;}
   padding: 6px 0;
 }
 .global_header > .content > ul > li > a > img { 
-  width: 60px;
-  height: 60px;
-  margin: 13px;
+  width: 50px;
+  height: 50px;
+  margin: 17.5px;
 }
 .global_header > .content > ul > li > a > h3 {
   color: #333;
@@ -58,12 +58,12 @@ a {text-decoration: none;}
 /* all - popup */
 
 #popupBasic {
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   width: 300px;
   height: 300px;
 }
 #popupBasic > img {
-  margin: 0 35px 25px 35px;
+  margin: 0 50px 40px 50px;
 }
 #popupBasic > .popup_msg {
   width: 200px;
@@ -74,9 +74,8 @@ a {text-decoration: none;}
 #popupBasic > .popup_msg > h4 {
   width: 200px;
   height: 20px;
-  text-overflow: ellipsis;  
   overflow: hidden;
-
+  text-overflow: ellipsis;
   margin: 3px 0;
   padding-right: 10px;
 }

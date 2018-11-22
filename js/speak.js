@@ -28,7 +28,6 @@ $(popup_lv).click(function() {
   
 }); // $(popup_lv).click()
   
-
 /*  SPEECH  */
 
 function speak() {
@@ -41,12 +40,6 @@ function speak() {
   } // if()
   
 } // speak()
-
-// $(".popup_speak > img").click(function () {
-//   speak();
-// });
-   
-/* speaker 클릭 */
 
 $(document).on("pagecreate", ".global_header", function(){
   $(".popup_speak").on("click", function () {

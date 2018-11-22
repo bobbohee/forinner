@@ -24,7 +24,7 @@
         <li><a><img src="img/hotel/cigarette.png"><h3>흡연실이 어디있나요?</h3><h3>Where is the smoking room?</h3></a></li>
         <div data-role="popup" id="popupBasic" data-position-to="window" data-overlay-theme="b">
           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-          <img class="msg_img" src="" width="180" height="180">
+          <img class="msg_img" src="" width="160" height="160">
           <div class="popup_msg">
             <h4 class="msg_ko"></h4>
             <h4 class="msg_en"></h4>
