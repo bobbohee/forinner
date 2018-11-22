@@ -54,4 +54,4 @@
       </div> <!-- .pictogram_wrap -->
     </div> <!-- content -->
   </div> <!-- page -->
-<?php include("header.php"); ?>
+<?php include("footer.php"); ?>
