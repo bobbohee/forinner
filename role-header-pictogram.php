@@ -6,7 +6,7 @@
   </span>
   <span class="lan">
     <a href="translation.php" rel="external">
-      <i class="fas fa-language fa-lg"></i>
+      <i class="fas fa-globe-americas"></i>
     </a>
   </span>
   <h3><a href="index.php" rel="external">ForInner</a></h3>
