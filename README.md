@@ -44,6 +44,6 @@ edit find the way
 
 ## DEVELOPER
 
-JS : park-bohee
+Front and JS : park-bohee
 
-DESIGN : park-jihee
+Front and Design : park-jihee
