@@ -1,28 +1,21 @@
 <?php include("header.php"); ?>
   <script>
-  
     $(function() {
-
         $(".translation").click(function() {
-
           var eng = $(".voice_eng").val();
-
-         $.ajax({
-             type : "GET",
-             url : "translation-ok.php?eng=" + eng,
-             dataType : "text",
-             error : function(){
-                 alert('통신실패');
-             },
-             success : function(data){
-                 $(".speak_kor").val(data) ;
-             }
-         });
-          
+          $.ajax({
+            type : "GET",
+            url : "translation-ok.php?eng=" + eng,
+            dataType : "text",
+            error : function(){
+              alert('통신실패');
+            },
+            success : function(data){
+              $(".speak_kor").val(data);
+            }
+          });
         });
-
     });
-
   </script>
   <div data-role="page" id="translation" class="global_header">
   <?php include("role-header-normal.php"); ?>

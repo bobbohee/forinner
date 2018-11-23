@@ -18,4 +18,4 @@
       </div>
     </div> <!-- content -->
   </div> <!-- page -->
-  <?php include("footer.php"); ?>
+<?php include("footer.php"); ?>

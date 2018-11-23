@@ -16,7 +16,6 @@
   <link rel="shortcut icon" sizes="196x196" href="img/splash/logo.png">
   <!-- splash -->
   <link rel="apple-touch-startup-image" href="img/splash/splash.png">
-  
   <!-- script -->
   <script src="js/all.min.js"></script>
   <script src="js/jquery-1.11.1.min.js"></script>
@@ -27,7 +26,6 @@
   <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
   <link rel="stylesheet" href="css/my-custom.css">
   <link rel="stylesheet" href="css/style.css">
-
    <!-- map -->
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=86c58910dfdf9ac41352dc0335e546d9"></script>
   <title>ForInner</title>

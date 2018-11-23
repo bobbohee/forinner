@@ -5,7 +5,7 @@
     <input type="search" name="search-mini" id="search-mini" data-mini="true" autocomplete="off"/>
       <ul class="popup_lv" data-role="listview" data-inset="true">
         <!-- 공항에서 -->
-        <li><a><img src="img/airport/exchange.png"><h3>환전해 주시겠어요?</h3><h3>I'd like to exchange this</h3></a></li>
+        <li><a><img src="img/airport/exchange.png"><h3>환전해 주시겠어요?</h3><h3>I'd like to exchange this.</h3></a></li>
         <li><a><img src="img/airport/window.png"><h3>창가 쪽 자리를 원합니다.</h3><h3>I would like to have a window seat.</h3></a></li>
         <li><a><img src="img/airport/weight-scale.png"><h3>무게한도가 얼마인가요?</h3><h3>What's the weight limit?</h3></a></li>
         <li><a><img src="img/airport/weight-money.png"><h3>무게 초과는 얼마를 지불해야 하나요?</h3><h3>How much do I have to pay for overweight.</h3></a></li>
@@ -22,7 +22,7 @@
         <li><a><img src="img/airport/map.png"><h3>시내지도 좀 얻을 수 있을까요?</h3><h3>May I have a city map?</h3></a></li>
         <div data-role="popup" id="popupBasic" data-position-to="window" data-overlay-theme="b">
           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-          <img class="msg_img" src="" width="180" height="180">
+          <img class="msg_img" src="" width="160" height="160">
           <div class="popup_msg">
             <h4 class="msg_ko"></h4>
             <h4 class="msg_en"></h4>

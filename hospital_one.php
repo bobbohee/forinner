@@ -12,7 +12,7 @@
         <li><a><img src="img/hospital/symptom/necks.png"><h3>목</h3><h3>Neck</h3></a></li>
         <li><a><img src="img/hospital/symptom/shoulder.png"><h3>어깨</h3><h3>Shoulder</h3></a></li>
         <li><a><img src="img/hospital/symptom/waist.png"><h3>허리</h3><h3>Waist</h3></a></li>
-        <li><a><img src="img/hospital/symptom/solar plexus.png"><h3>명치</h3><h3>Solar plexus</h3></a></li>
+        <li><a><img src="img/hospital/symptom/solar plexus.png"><h3>명치</h3><h3>Solar Plexus</h3></a></li>
         <li><a><img src="img/hospital/symptom/stomach.png"><h3>배</h3><h3>Stomach</h3></a></li>
         <li><a><img src="img/hospital/symptom/arm.png"><h3>팔</h3><h3>Arm</h3></a></li>
         <li><a><img src="img/hospital/symptom/elbow.png"><h3>팔꿈치</h3><h3>Elbow</h3></a></li>
@@ -26,7 +26,7 @@
         <li><a><img src="img/hospital/symptom/foot.png"><h3>발</h3><h3>Foot</h3></a></li>
         <div data-role="popup" id="popupBasic" data-position-to="window" data-overlay-theme="b">
           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-          <img class="msg_img" src="" width="180" height="180">
+          <img class="msg_img" src="" width="160" height="160">
           <div class="popup_msg">
             <h4 class="msg_ko"></h4>
             <h4 class="msg_en"></h4>

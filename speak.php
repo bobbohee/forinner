@@ -25,11 +25,11 @@
         <li><a><img src="img/speak/door.png"><h3>입구가 어디인가요?</h3><h3>Where is the entrance?</h3></a></li>
         <li><a><img src="img/speak/ferris.png"><h3>가볼 만한 곳이 어디인가요?</h3><h3>What do you think are the best places to see?</h3></a></li>
         <!-- 위급상황 -->
-        <li><a><img src="img/speak/police.png"><h3>경찰서에 신고해주세요.</h3><h3>Please turn on the air conditioner.</h3></a></li>
-        <li><a><img src="img/speak/ambulance.png"><h3>구급차를 불러주세요.</h3><h3>Please turn on the air conditioner.</h3></a></li>
+        <li><a><img src="img/speak/police.png"><h3>경찰서에 신고해주세요.</h3><h3>Please report it to the police station.</h3></a></li>
+        <li><a><img src="img/speak/ambulance.png"><h3>구급차를 불러주세요.</h3><h3>Please call an ambulance.</h3></a></li>
         <div data-role="popup" id="popupBasic" data-position-to="window" data-overlay-theme="b">
           <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-          <img class="msg_img" src="" width="180" height="180">
+          <img class="msg_img" src="" width="160" height="160">
           <div class="popup_msg">
             <h4 class="msg_ko"></h4>
             <h4 class="msg_en"></h4>
