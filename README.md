@@ -1,6 +1,16 @@
 # Description
 
-[Forinner](https://forinner.herokuapp.com/index.php) is english possible hospital information map and finding a way service and provide various pictogram
+[Forinner](https://forinner.herokuapp.com/index.php) is english possible hospital information map and finding a way service and provide pictogram
+
+## SKILL
+
+1. Hospital and Pharmacy Map
+
+2. Various Pictogram
+
+3. Emergency Phone Number
+
+4. Speech Recognition and Translation
 
 ## LIBRARY
 
