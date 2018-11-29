@@ -6,9 +6,9 @@ $(function () {
   }
 
   var recognition = new webkitSpeechRecognition();
-  var isRecognizing = false;  // 음성 여부
-  var ignoreOnend = false;    // 무시
-  var finalTranscript = '';   // 음성 -> 텍스트
+  var isRecognizing = false; // 음성 여부
+  var ignoreOnend = false; // 무시
+  var finalTranscript = ''; // 음성 -> 텍스트
   var $btnMic = $('#btn-mic');
 
   recognition.continuous = true;
@@ -48,7 +48,7 @@ $(function () {
   recognition.onresult = function (event) {
     console.log('onresult', event);
 
-    var interimTranscript = '';   // 중간의 음성 변환 텍스트
+    var interimTranscript = ''; // 중간의 음성 변환 텍스트
 
     if (typeof (event.results) == 'undefined') {
       recognition.onend = null;
@@ -60,16 +60,16 @@ $(function () {
       if (event.results[i].isFinal) {
         finalTranscript = event.results[i][0].transcript;
         console.log("onresult event.results -> " + event.results[i]);
-      } else {                          // 중간의 음성
+      } else { // 중간의 음성
         interimTranscript += event.results[i][0].transcript;
       }
 
     }
 
     finalTranscript = capitalize(finalTranscript);
-    alert(finalTranscript);
+    console.log(finalTranscript);
     var eng = linebreak(finalTranscript);
-    alert(eng);
+    console.log(eng);
     $("#eng").val(eng);
 
     console.log('finalTranscript', finalTranscript);
