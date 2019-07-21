@@ -6,7 +6,7 @@
         <div class="pictogram_cell">
           <a href="location.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/route.png" alt="location" width="90" height="90">
+              <img src="img/icon/route.png" alt="location" />
             </div>
             <p>Location</p>
           </a>  
@@ -14,7 +14,7 @@
         <div class="pictogram_cell">
           <a href="hotel.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/apartment.png" alt="hotel" width="90" height="90">
+              <img src="img/icon/apartment.png" alt="hotel" />
             </div>
             <p>Hotel</p>
           </a>
@@ -22,7 +22,7 @@
           <div class="pictogram_cell">
           <a href="pharmacy.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/drug.png" alt="drug" width="90" height="90">
+              <img src="img/icon/drug.png" alt="drug" />
             </div>
             <p>Pharmacy</p>
           </a>
@@ -30,7 +30,7 @@
         <div class="pictogram_cell">
           <a href="hospital.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/cross.png" alt="pharmacy" width="90" height="90">
+              <img src="img/icon/cross.png" alt="pharmacy" />
             </div>
             <p>Hospital</p>
           </a>
@@ -38,7 +38,7 @@
         <div class="pictogram_cell">
           <a href="speak.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/speak.png" alt="speak" width="90" height="90">
+              <img src="img/icon/speak.png" alt="speak" />
             </div>
             <p>Speak</p>
           </a>
@@ -46,7 +46,7 @@
         <div class="pictogram_cell">
           <a href="airport.php" rel="external">
             <div class="pictogram_icon">
-              <img src="img/icon/airport.png" alt="call" width="90" height="90">
+              <img src="img/icon/airport.png" alt="call"  >
             </div>
             <p>Airport</p>
           </a>

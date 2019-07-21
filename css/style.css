@@ -7,7 +7,7 @@
   padding: 0;
   color: #333;
   font-weight: normal;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   box-sizing: border-box;
 }
 li {list-style: none;}
@@ -97,14 +97,14 @@ a {text-decoration: none;}
 
 #index > .content > .pictogram_wrap {
   width: 320px;
-  height: 510px;
+  height: 540px;
   margin: 0 auto;
 }
 #index > .content > .pictogram_wrap > .pictogram_cell {
   width: 130px;
-  height: 160px;
+  height: 165px;
   float: left;
-  margin: 20px 15px 0 15px;
+  margin: 15px 15px 0 15px;
 }
 #index > .content > .pictogram_wrap > .pictogram_cell > a {
   display: inline-block;
@@ -118,9 +118,13 @@ a {text-decoration: none;}
 #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon {
   width: 130px;
   height: 130px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: rgba(224, 224, 224, 0.5);
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #f2f2f2; 
+}
+#index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon > img {
+  width: 80px;
+  height: 80px;
 }
 
 /* emergency.php */
@@ -238,11 +242,11 @@ a {text-decoration: none;}
   font-size: 16px;
 }
 
-/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------*/
 
-/*----------------------------------------------------------------- Tablet -----------------------------------------------------------------*/
+/*-------------------- Tablet --------------------*/
 
-/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------*/
 
 /* 760 x 960 */
 @media screen and (min-width: 760px){ 
@@ -316,13 +320,12 @@ a {text-decoration: none;}
   #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon {
     width: 210px;
     height: 210px;
-    padding: 35px;
-    border-radius: 20px;
-    background-color: rgba(224, 224, 224, 0.5);
+    padding: 40px;;
     margin-left: 20px;
   }
-  #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon > img{
-    width: 140px; height: 140px;
+  #index > .content > .pictogram_wrap > .pictogram_cell > a > .pictogram_icon > img {
+    width: 130px; 
+    height: 130px;
   } 
   /* emergency.php */
   
