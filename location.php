@@ -40,7 +40,7 @@
             <h4 class="msg_en"></h4>
           </div>
           <div class="popup_speak">
-            <img src="img/icon/speaker.png" width="40" height="40">
+            <img src="img/icon/speaker.png" width="35" height="35">
           </div>
         </div> <!-- popup -->
       </ul>
