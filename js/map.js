@@ -1,28 +1,26 @@
 $(window).load(function () {
+  let imageBlue = 'https://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
+  let imageRed = 'https://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png';
+  let imagePurple = 'https://www.google.com/intl/en_us/mapfiles/ms/micons/purple-dot.png';
 
-  var imageBlue = "https://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
-  var imageRed = "https://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png";
-  var imagePurple = "https://www.google.com/intl/en_us/mapfiles/ms/micons/purple-dot.png";
-
-  var imageSize = new daum.maps.Size(30, 30);
-  var imageOption = { offset: new daum.maps.Point(15, 30) };
+  let imageSize = new daum.maps.Size(30, 30);
+  let imageOption = { offset: new daum.maps.Point(15, 30) };
 
   // 클릭한 마커와 윈도우를 담을 변수
-  var selectedMarker = null;
-  var selectedIw = null;
+  let selectedMarker = null;
+  let selectedIw = null;
 
   /* 지도 생성 */
-  var mapContainer = document.getElementById('map');      // 지도를 표시할 div 
-  var mapOption = {
+  let mapContainer = document.getElementById('map');      // 지도를 표시할 div 
+  let mapOption = {
     center: new daum.maps.LatLng(33.450701, 126.570667),  // 지도의 중심좌표
     level: 3                                              // 지도의 확대 레벨 
   };
 
-  var map = new daum.maps.Map(mapContainer, mapOption);   // 지도를 생성합니다
+  let map = new daum.maps.Map(mapContainer, mapOption);   // 지도 생성
 
   /* 강남구 약국 좌표 */
-  var positions = [
-
+  let positions = [
     {
       title: '포인트약국',
       call: '547-3196',
@@ -378,29 +376,25 @@ $(window).load(function () {
       address: '서울 강남구 선릉로 806',
       latlng: new daum.maps.LatLng(37.526612, 127.044298)
     }
+  ]; // 약국 info
 
-  ]; // positions[]
-
-  for (var i = 0; i < positions.length; i++) {
-
+  for (let i = 0; i < positions.length; i++) {
     // 마커를 생성하고 지도위에 표시
     addMarker(positions[i]);
-
   } // for()
 
   function addMarker(positions) {
-
-    var redMarker = new daum.maps.MarkerImage(imageRed, imageSize, imageOption);
-    var purpleMarker = new daum.maps.MarkerImage(imagePurple, imageSize, imageOption);
+    let redMarker = new daum.maps.MarkerImage(imageRed, imageSize, imageOption);
+    let purpleMarker = new daum.maps.MarkerImage(imagePurple, imageSize, imageOption);
 
     /* 지도에 마커 생성 */
-    var marker = new daum.maps.Marker({
+    let marker = new daum.maps.Marker({
       map: map,                       // 마커를 표시할 지도
       position: positions.latlng,     // 마커를 표시할 위치
       image: redMarker                // 마커 이미지 
     });
 
-    var iwContent = '<div class="iwContent">' +
+    let iwContent = '<div class="iwContent">' +
                       '<p class="iwContent_title">' + positions.title + '</p>' +
                       '<p class="iwContent_call">' + positions.call + '</p>' +
                       '<button class="btn btn-default">' + 
@@ -412,17 +406,15 @@ $(window).load(function () {
                     '</div>';
 
     /* 마커에 표시할 인포윈도우를 생성 */
-    var infowindow = new daum.maps.InfoWindow({
+    let infowindow = new daum.maps.InfoWindow({
       content: iwContent,
       removable: true  // X 버튼 생성
     });
 
     /* 마커에 click 이벤트를 등록 */
     daum.maps.event.addListener(marker, 'click', function () {
-
       // 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
       if (!selectedMarker || selectedMarker !== marker) {
-
         // 클릭된 마커 객체가 null이 아니면
         if (selectedMarker != null) {
           selectedMarker.setImage(redMarker);
@@ -432,49 +424,40 @@ $(window).load(function () {
         // 현재 클릭된 마커의 이미지를 클릭 이미지로 변경
         marker.setImage(purpleMarker);
         infowindow.open(map, marker);
-
       }
 
       // 클릭된 마커를 현재 클릭된 마커 객체로 설정
       selectedMarker = marker;
       selectedIw = infowindow;
-
     }); // addListener(click)
-
   } // addMarker()
 
   /* 현재 위치 찾기 */
-  $("#current_location").click(function () {
-
+  $('#current_location').click(function () {
     // HTML5의 geolocation으로 사용할 수 있는지 확인
     if (navigator.geolocation) {
-
       // GeoLocation을 이용해서 접속 위치를 얻어옴
       navigator.geolocation.getCurrentPosition(function (position) {
 
         // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성
-        var lat = position.coords.latitude;     // 위도
-        var lon = position.coords.longitude;    // 경도
-        var locPosition = new daum.maps.LatLng(lat, lon);
+        let lat = position.coords.latitude;     // 위도
+        let lon = position.coords.longitude;    // 경도
+        let locPosition = new daum.maps.LatLng(lat, lon);
 
-        var blueMarker = new daum.maps.MarkerImage(imageBlue, imageSize, imageOption);
+        let blueMarker = new daum.maps.MarkerImage(imageBlue, imageSize, imageOption);
 
         // 마커 표시
         displayMarker(locPosition, blueMarker);
-
       }); // getCurrentPosition()
-
     } else {
-      alert("GeoLocation을 사용할 수 없습니다");
+      alert('GeoLocation을 사용할 수 없습니다');
     } // if else
-
   }); // click()
 
   /* 지도에 마커 표시하는 함수 */
   function displayMarker(locPosition, blueMarker) {
-
     // 마커 생성
-    var marker = new daum.maps.Marker({
+    let marker = new daum.maps.Marker({
       map: map,
       image: blueMarker,
       position: locPosition
@@ -482,37 +465,35 @@ $(window).load(function () {
 
     // 지도 중심좌표를 접속위치로 변경
     map.setCenter(locPosition);
-
   } // displayMarker()    
 
   /* 주소-좌표 변환 객체 생성 */
-  var geocoder = new daum.maps.services.Geocoder();
+  let geocoder = new daum.maps.services.Geocoder();
 
   daum.maps.event.addListener(map, 'click', function(mouseEvent) {
     searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
-        if (status === daum.maps.services.Status.OK) {
-            var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
+      if (status === daum.maps.services.Status.OK) {
+        let detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
             detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
-            
-            var content = '<div class="bAddr">' +
-                            '<span class="title">법정동 주소정보</span>' + 
-                            detailAddr + 
-                        '</div>';
+        
+        let content = '<div class="bAddr">' +
+                        '<span class="title">법정동 주소정보</span>' + 
+                        detailAddr + 
+                      '</div>';
 
-            // 마커를 클릭한 위치에 표시합니다 
-            marker.setPosition(mouseEvent.latLng);
-            marker.setMap(map);
+        // 마커를 클릭한 위치에 표시합니다 
+        marker.setPosition(mouseEvent.latLng);
+        marker.setMap(map);
 
-            // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
-            infowindow.setContent(content);
-            infowindow.open(map, marker);
-        }   
+        // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
+        infowindow.setContent(content);
+        infowindow.open(map, marker);
+      }   
     });
-});
+  });
 
   function searchDetailAddrFromCoords(coords, callback) {
     // 좌표로 법정동 상세 주소 정보를 요청합니다
     geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
   }
-
 }); // $(window).load
